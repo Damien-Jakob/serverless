@@ -7,7 +7,7 @@ def to_upper_case(event:, context:)
         statusCode: 200,
         body: {
             message: 'Serverless toUpperCase',
-            input: event[:body].upcase
+            input: event.upcase
         }.to_json
     }
   rescue StandardError => e
@@ -15,7 +15,7 @@ def to_upper_case(event:, context:)
     puts e.backtrace.inspect
     {
         statusCode: 400,
-        body: JSON.generate("Bad request, please POST a request body!")
-    }
+        body: e.message
+    }.to_json
   end
 end
