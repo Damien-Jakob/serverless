@@ -7,7 +7,7 @@ provider:
 
 functions:
   to_upper_case:
-    handler: handler.hello
+    handler: handler.to_upper_case
     events:
       - http:
           path: toUpperCase
