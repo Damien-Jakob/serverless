@@ -157,4 +157,10 @@ Unknown application error occurred
 Function<NoMethodError>
 ```
 
+## Image
+### Test
+
+    curl --data-binary "@test/unicorn.jpg" https://pxyiq8fk75.execute-api.eu-west-1.amazonaws.com/dev/sepia -o "test/unicorncopy.jpg"
+
+
 
